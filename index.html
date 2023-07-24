@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CALCULADORA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script defer src="./js/main.js"></script>
+    <style>
+        h1{
+            font-family: "Sofia";
+            color: rgb(189, 92, 109);
+        }
+        .form-control{
+            border-width: 3px;
+            border-color : rgb(255, 128, 149) ;
+            width: 808px;
+            height: 50px;
+        }
+        .table-pink{
+            border-width: 15px;
+            border-color : rgb(255, 128, 149) ;
+            background-color: rgb(218, 160, 170);
+            text-align: center;
+        }
+        .btn-light{
+            background-color: palevioletred;
+            color: rgb(240, 215, 223);
+            width: 200px;
+            height: 80px;
+        }
+        
+        .btn-light:hover{
+            background-color: rgb(240, 215, 223);
+            color: rgb(172, 70, 126);
+
+        }
+
+    </style>
+</head>
+  <body>
+    <br>
+    <main class="container">
+        <h1>Hi calculator!</h1>
+        <div class="mb-3">
+            <span id="lblDatos"> </span>
+            <input type="text" class="form-control" width="60px" id="txtResultado">
+        </div>
+        <table class="table-pink">
+        <tr>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`7`)">7</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`8`)">8</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`9`)">9</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`*`)">*</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`4`)">4</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`5`)">5</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`6`)">6</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="operacion(`-`)">-</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`1`)">1</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`2`)">2</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`3`)">3</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="operacion(`+`)">+</button></td>
+        </tr>
+        <tr>
+            
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`0`)">0</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="numero(`.`)">.</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="calcular()">=</button></td>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="operacion(`/`)">/</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-light btn-lg" onclick="clear()">C</button></td>
+        </tr>
+      </table>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>
